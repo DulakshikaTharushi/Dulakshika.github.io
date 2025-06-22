@@ -1,36 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pathushi Munasinghe | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f8fb;
+      color: #222;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #0ba87e 60%, #1e3c72 100%);
+      color: white;
+      padding: 2.5rem 1rem 2rem 1rem;
+      box-shadow: 0 2px 8px rgba(30,60,114,0.07);
+      position: relative;
+    }
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 2px 8px rgba(30,60,114,0.12);
+      margin-bottom: 1rem;
+      background: #e0e0e0;
+      display: inline-block;
+    }
+    h1 {
+      font-size: 2.3rem;
+      margin: 0.5rem 0 0.2rem 0;
+      letter-spacing: 1px;
+    }
+    h2 {
+      color: #0ba87e;
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+    section {
+      max-width: 700px;
+      margin: 2.5rem auto;
+      background: #fff;
+      padding: 2.2rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(30,60,114,0.08);
+      text-align: left;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 1.1rem;
+      line-height: 1.6;
+    }
+    a {
+      color: #0ba87e;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #1e3c72;
+      text-decoration: underline;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+      display: flex;
+      gap: 2.5rem;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      font-size: 1.08rem;
+      margin: 0;
+    }
+    .contact-icon {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      color: #0ba87e;
+    }
+    footer {
+      margin: 2.5rem 0 1.2rem 0;
+      color: #888;
+      font-size: 0.98rem;
+      letter-spacing: 0.2px;
+    }
+    @media (max-width: 600px) {
+      section {
+        padding: 1.2rem 0.7rem;
+      }
+      .contact-list {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
 
   <header>
-    <h1>Hello, I'm [Your Name]</h1>
-    <p>Software Developer | Designer | Creator</p>
+    <img src="profile.jpg" alt="Profile Photo" class="profile-img" onerror="this.style.display='none'"/>
+    <h1>Tharushi Dulakshika</h1>
+    <p style="font-size:1.15rem; margin-top:0.2rem; letter-spacing:0.2px;">
+      Software Engineering Undergraduate
+    </p>
   </header>
 
-  <section id="projects">
-    <h2>My Projects</h2>
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I am a second-year undergraduate at the National Institute of Business Management, specializing in software engineering. My interests span full-stack development, robotics, and IoT. I am proficient in technologies such as REST APIs, React, Spring Boot, JavaScript, C#, C, Java, and C++. I have contributed to several projects, both independently and collaboratively, demonstrating strong problem-solving and teamwork skills.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
     <ul>
       <li>
-        <h3>Project 1</h3>
-        <p>Description of project 1</p>
+        <strong>Urban Food E-Commerce Platform</strong><br>
+        Developed a scalable web application for urban food delivery and ordering, utilizing React for the frontend, Spring Boot for the backend, and Oracle Database. Implemented secure authentication, real-time order tracking, and an intuitive user interface.
       </li>
       <li>
-        <h3>Project 2</h3>
-        <p>Description of project 2</p>
+        <strong>Conveyor Belt with Robot Arm</strong><br>
+        Engineered a robotic module integrating a conveyor belt and robotic arm, programmed in C++ and controlled via Arduino. Enabled automated sorting and object manipulation for industrial applications.
+      </li>
+      <li>
+        <strong>Air Conditioning Contract Company Management System</strong><br>
+        Designed and built a Windows Forms application in C# to streamline contract, client, and service schedule management for an air conditioning service provider.
       </li>
     </ul>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: yourname@example.com</p>
+  <section>
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li>
+        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+        <a href="mailto:dulakshikatharushi2003@gmail.com">dulakshikatharushi2003@gmail.com</a>
+      </li>
+      <li>
+        <span class="contact-icon"><i class="fab fa-github"></i></span>
+        <a href="https://github.com/DulakshikaTHarushi" target="_blank">github.com/DulakshikaTharushi</a>
+      </li>
+    </ul>
   </section>
+
+  <footer>
+    &copy; 2025 Tharushi Dulakshika &mdash; All rights reserved.
+  </footer>
 
 </body>
 </html>
